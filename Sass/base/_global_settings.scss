@@ -49,3 +49,18 @@ img {
 .btn {
   @extend %button;
 }
+
+input,
+textarea {
+  border: solid 1px $color3;
+  height: 60px;
+  border-radius: 5px;
+  background: $color2;
+  color: $color4;
+  &:focus-visible {
+    outline: solid 2px $color4;
+  }
+  &:focus {
+    background: $color1;
+  }
+}
