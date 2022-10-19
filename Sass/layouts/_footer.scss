@@ -51,4 +51,49 @@ input[type='submit'] {
 }
 // contact section
 .contact__section {
+  display: grid;
+  grid-template-rows: repeat(4, calc(1fr));
+  border-left: solid 1px $color3;
+
+  .cs__container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    &:nth-child(n + 2) {
+      border-top: solid 1px $color3;
+    }
+  }
+  .cs__title {
+    margin-left: 40px;
+    text-transform: uppercase;
+    font-family: $font-title, sans-serif;
+    font-variation-settings: 'wght' 800;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: $color4;
+  }
+  address,
+  a {
+    font-style: normal;
+    color: $color6;
+    font-size: 0.9rem;
+    font-weight: 550;
+    line-height: 30px;
+  }
+  .cs__icons_container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    li {
+      height: 50px;
+      width: 50px;
+      border: solid 1px $color3;
+      border-radius: 50px;
+      @include center;
+      a {
+        font-size: 1.2rem;
+        color: $color5;
+      }
+    }
+  }
 }
