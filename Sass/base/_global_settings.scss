@@ -5,11 +5,14 @@
   list-style-type: none;
   // outline: none;
 }
-
 body {
   font-family: $font-1;
+  background: url(../../images/bg.jpg) center/cover fixed;
 }
-
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
 h1 {
   font-family: $font-title;
   font-size: 4.5rem;
@@ -17,7 +20,6 @@ h1 {
   letter-spacing: 7px;
   text-transform: uppercase;
 }
-
 h2 {
   font-family: 'font-title', sans-serif;
   font-size: 3.9rem;
@@ -25,19 +27,20 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 h3 {
   font-family: 'font-title', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
 }
-
-a, a:visited{
+p {
+  line-height: 40px;
+}
+a,
+a:visited {
   color: $color5;
   text-decoration: none;
 }
-
 .btn {
   @extend %button;
 }
