@@ -1,0 +1,32 @@
+.secondary__section__container {
+  background: $color1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.ss__article {
+  padding: 75px 10%;
+  .ss__header{
+    text-align: center;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    border: solid 1px $color3;
+    width: calc(100% - 0.15%);
+    top: 0;
+    left: 0;
+  }
+  &:first-child {
+    border-right: solid 1px $color3;
+  }
+      h3{
+        margin: 15px 27%;
+        line-height: 40px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    p{
+        margin: 25px 0;
+    }
+}

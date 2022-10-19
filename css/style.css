@@ -102,6 +102,7 @@ header {
 .header__container p {
   padding: 40px 0;
   width: 85%;
+  text-align: center;
 }
 .header__container .arrow {
   width: 60px;
@@ -217,4 +218,38 @@ nav {
 
 .ms__img {
   margin-bottom: 60px;
+}
+
+.secondary__section__container {
+  background: rgb(243, 243, 243);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+
+.ss__article {
+  padding: 75px 10%;
+}
+.ss__article .ss__header {
+  text-align: center;
+}
+.ss__article::before {
+  content: "";
+  position: absolute;
+  border: solid 1px rgb(209, 209, 209);
+  width: 99.85%;
+  top: 0;
+  left: 0;
+}
+.ss__article:first-child {
+  border-right: solid 1px rgb(209, 209, 209);
+}
+.ss__article h3 {
+  margin: 15px 27%;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.ss__article p {
+  margin: 25px 0;
 }/*# sourceMappingURL=style.css.map */
