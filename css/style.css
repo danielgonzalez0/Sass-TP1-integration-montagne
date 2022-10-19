@@ -229,8 +229,6 @@ nav {
 
 .ss__article {
   padding: 75px 10%;
-}
-.ss__article .ss__header {
   text-align: center;
 }
 .ss__article::before {
@@ -248,8 +246,8 @@ nav {
   margin: 15px 27%;
   line-height: 40px;
   letter-spacing: 2px;
-  text-align: center;
 }
-.ss__article p {
+.ss__article .ss__content p {
   margin: 25px 0;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

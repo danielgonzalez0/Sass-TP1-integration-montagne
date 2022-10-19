@@ -6,9 +6,8 @@
 }
 .ss__article {
   padding: 75px 10%;
-  .ss__header{
-    text-align: center;
-  }
+  text-align: center;
+
   &::before {
     content: '';
     position: absolute;
@@ -20,13 +19,14 @@
   &:first-child {
     border-right: solid 1px $color3;
   }
-      h3{
-        margin: 15px 27%;
-        line-height: 40px;
-        letter-spacing: 2px;
-        text-align: center;
-    }
-    p{
-        margin: 25px 0;
-    }
+  h3 {
+    margin: 15px 27%;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+  .ss__content p {
+    margin: 25px 0;
+    text-align: left;
+  }
+
 }
