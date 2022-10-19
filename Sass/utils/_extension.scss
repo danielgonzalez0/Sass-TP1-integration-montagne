@@ -1,0 +1,21 @@
+%button {
+  display: inline-block;
+  background: transparent;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-family: $font-title;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  border: solid 2px $color5;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    background: $color5;
+    color: $color1;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}

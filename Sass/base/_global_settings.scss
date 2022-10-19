@@ -1,3 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  // outline: none;
+}
+
 body {
-  background: turquoise;
+  font-family: $font-1;
+}
+
+h1 {
+  font-family: $font-title;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'font-title', sans-serif;
+  font-size: 3.9rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'font-title', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+a, a:visited{
+  color: $color5;
+  text-decoration: none;
+}
+
+.btn {
+  @extend %button;
 }
