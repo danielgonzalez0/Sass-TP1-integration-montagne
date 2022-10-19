@@ -16,21 +16,21 @@ body {
 h1 {
   font-family: $font-title;
   font-size: 4.5rem;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: 'wght' 600;
   letter-spacing: 7px;
   text-transform: uppercase;
 }
 h2 {
   font-family: 'font-title', sans-serif;
   font-size: 3.9rem;
-  font-weight: 800;
+  font-variation-settings: 'wght' 600;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 h3 {
   font-family: 'font-title', sans-serif;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-variation-settings: 'wght' 600;
   text-transform: uppercase;
 }
 p {
@@ -40,6 +40,11 @@ a,
 a:visited {
   color: $color5;
   text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 .btn {
   @extend %button;
