@@ -45,6 +45,13 @@ nav {
     font-size: 0.8rem;
     font-variation-settings: 'wght' 800;
     letter-spacing: 3px;
+    @media screen and (max-width: 460px) {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+    }
+    @media screen and (max-width: 365px) {
+ padding: 0 4px
+    }
     &:first-child {
       background: $color2;
       color: $color5;
@@ -77,5 +84,8 @@ nav {
         color: $color4;
       }
     }
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 }

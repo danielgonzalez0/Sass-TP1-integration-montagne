@@ -3,6 +3,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
+  @media screen and (max-width: 900px) {
+grid-template-columns: 1fr;
+  }
 }
 .ss__article {
   padding: 75px 10%;
@@ -20,13 +23,16 @@
     border-right: solid 1px $color3;
   }
   h3 {
-    margin: 15px 27%;
+    margin: 15px 10%;
     line-height: 40px;
     letter-spacing: 2px;
+    max-height: 100px;
+    @media screen and (max-width: 1270px) {
+      font-size: 1.2rem;
+    }
   }
   .ss__content p {
     margin: 25px 0;
     text-align: left;
   }
-
 }

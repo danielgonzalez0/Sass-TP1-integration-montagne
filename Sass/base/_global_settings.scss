@@ -12,6 +12,9 @@ body {
 .wrapper {
   width: 75%;
   margin: 0 auto;
+  @media screen and (max-width: 600px) {
+    width: 85%;
+  }
 }
 h1 {
   font-family: $font-title;
@@ -19,6 +22,22 @@ h1 {
   font-variation-settings: 'wght' 600;
   letter-spacing: 7px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 900px) {
+    font-size: 3.5rem;
+    width: 80%;
+  }
+  @media screen and (max-width: 680px) {
+    font-size: 2.5rem;
+    width: 90%;
+  }
+    @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+      @media screen and (max-width: 360px) {
+    font-size: 1.5rem;
+    width: 100%;
+  }
 }
 h2 {
   font-family: 'font-title', sans-serif;
@@ -26,6 +45,9 @@ h2 {
   font-variation-settings: 'wght' 600;
   letter-spacing: 2px;
   text-transform: uppercase;
+  @media screen and (max-width: 900px) {
+    font-size: 2.9rem;
+  }
 }
 h3 {
   font-family: 'font-title', sans-serif;

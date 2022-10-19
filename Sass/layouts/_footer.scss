@@ -3,6 +3,9 @@ footer {
   background: $color2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 1250px) {
+    grid-template-columns: 1fr;
+  }
 }
 // form section
 .form__container {
@@ -57,10 +60,20 @@ input[type='submit'] {
 
   .cs__container {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
+    min-height: 120px;
     align-items: center;
     &:nth-child(n + 2) {
       border-top: solid 1px $color3;
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 30% 70%;
+    }
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+        @media screen and (max-width: 380px) {
+      max-width: 250px;
     }
   }
   .cs__title {
@@ -79,11 +92,17 @@ input[type='submit'] {
     font-size: 0.9rem;
     font-weight: 550;
     line-height: 30px;
+    @media screen and (max-width: 500px) {
+      margin-left: 40px;
+    }
   }
   .cs__icons_container {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
+    @media screen and (max-width: 500px) {
+      padding-left: 40px;
+    }
     li {
       height: 50px;
       width: 50px;
@@ -93,6 +112,11 @@ input[type='submit'] {
       a {
         font-size: 1.2rem;
         color: $color5;
+        @media screen and (max-width: 500px) {
+          i {
+            transform: translateX(-20px);
+          }
+        }
       }
     }
   }
