@@ -66,13 +66,19 @@ input[type='submit'] {
     &:nth-child(n + 2) {
       border-top: solid 1px $color3;
     }
+    @media screen and (max-width: 1250px) {
+      &:nth-child(n) {
+        border-top: solid 1px $color3;
+      }
+    }
+
     @media screen and (max-width: 600px) {
       grid-template-columns: 30% 70%;
     }
     @media screen and (max-width: 500px) {
       grid-template-columns: 1fr;
     }
-        @media screen and (max-width: 380px) {
+    @media screen and (max-width: 380px) {
       max-width: 250px;
     }
   }
@@ -109,6 +115,13 @@ input[type='submit'] {
       border: solid 1px $color3;
       border-radius: 50px;
       @include center;
+      &:hover,
+      &:active {
+        background: $color5;
+        a {
+          color: $color3;
+        }
+      }
       a {
         font-size: 1.2rem;
         color: $color5;
