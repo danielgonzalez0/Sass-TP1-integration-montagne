@@ -1,10 +1,10 @@
 @font-face {
   font-family: "font-title";
-  src: url(../../../fonts/Inter-VariableFont_slntwght.ttf);
+  src: url(../../fonts/Inter-VariableFont_slntwght.ttf);
 }
 @font-face {
   font-family: "font-1";
-  src: url(../../../fonts/Merriweather-Light.ttf);
+  src: url(../../fonts/Merriweather-Light.ttf);
 }
 .btn {
   display: inline-block;
@@ -35,7 +35,7 @@
 
 body {
   font-family: "font-1", sans-serif;
-  background: url(../../../images/bg.jpg) center/cover fixed;
+  background: url(../../images/bg.jpg) center/cover fixed;
 }
 
 .wrapper {
