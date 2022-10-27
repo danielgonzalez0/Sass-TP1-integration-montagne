@@ -1,10 +1,10 @@
 @font-face {
   font-family: "font-title";
-  src: url("../../fonts/Inter-VariableFont_slnt,wght.ttf");
+  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 @font-face {
   font-family: "font-1";
-  src: url("../../fonts/Merriweather-Light.ttf");
+  src: url("../fonts/Merriweather-Light.ttf");
 }
 .btn {
   display: inline-block;
@@ -33,9 +33,13 @@
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "font-1", sans-serif;
-  background: url("../../images/bg.jpg") center/cover fixed;
+  background: url("../images/bg.jpg") center/cover fixed;
 }
 
 .wrapper {
@@ -116,10 +120,11 @@ img {
 
 input,
 textarea {
+  font-family: "font-1", sans-serif, sans-serif;
   border: solid 1px rgb(209, 209, 209);
   height: 60px;
   border-radius: 5px;
-  background: rgb(233, 233, 233);
+  background: none;
   color: rgb(105, 105, 105);
 }
 input:focus-visible,
@@ -127,8 +132,25 @@ textarea:focus-visible {
   outline: solid 2px rgb(105, 105, 105);
 }
 input:focus,
-textarea:focus {
-  background: rgb(243, 243, 243);
+input :visited,
+textarea:focus,
+textarea :visited {
+  background: none;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(105, 105, 105);
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 header {
@@ -136,6 +158,10 @@ header {
   color: rgb(243, 243, 243);
   display: grid;
   grid-template-rows: 1fr 80px;
+  opacity: 0;
+  transform: translateY(60px);
+  -webkit-animation: headerAnim 1.5s forwards;
+          animation: headerAnim 1.5s forwards;
 }
 
 .header__container {
@@ -144,6 +170,18 @@ header {
   align-items: center;
   justify-content: baseline;
   flex-direction: column;
+}
+@-webkit-keyframes headerAnim {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headerAnim {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .header__container h1 {
   width: 75%;
@@ -163,6 +201,9 @@ header {
   justify-content: center;
   align-items: center;
 }
+.header__container .arrow i {
+  color: rgb(243, 243, 243);
+}
 
 nav {
   display: flex;
@@ -175,6 +216,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.navbar__menu__container:hover li:not(:hover) {
+  background: none;
+  color: rgb(243, 243, 243);
 }
 @media screen and (max-width: 900px) {
   .navbar__menu__container {
@@ -218,7 +263,7 @@ nav {
   color: black;
 }
 .navbar__menu__container li li:first-child {
-  background: transparent;
+  background: none;
   color: rgb(243, 243, 243);
 }
 

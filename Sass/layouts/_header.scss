@@ -4,11 +4,22 @@ header {
   color: $color1;
   display: grid;
   grid-template-rows: 1fr 80px;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: headerAnim 1.5s forwards;
 }
 .header__container {
   @include center;
   justify-content: baseline;
   flex-direction: column;
+
+  //anim header au chargement de la page
+  @keyframes headerAnim {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   h1 {
     width: 75%;
     text-align: center;
@@ -24,6 +35,10 @@ header {
     border: solid $color1 1px;
     border-radius: 50px;
     @include center;
+
+    i {
+      color: $color1;
+    }
   }
 }
 // navbar part
@@ -34,6 +49,11 @@ nav {
   background: rgba($color1, 0.25);
 }
 .navbar__menu__container {
+  //donne un comportement aux élts non survolés
+  &:hover li:not(:hover) {
+    background: none;
+    color: $color1;
+  }
   @include center;
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -69,7 +89,7 @@ nav {
     }
 
     li:first-child {
-      background: transparent;
+      background: none;
       color: $color1;
     }
   }

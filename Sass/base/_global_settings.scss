@@ -5,9 +5,14 @@
   list-style-type: none;
   // outline: none;
 }
+
+//pour a quand ancre pour quel le scroll ne soit pas trop violent
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $font-1;
-  background: url('../../images/bg.jpg') center/cover fixed;
+  background: url('../images/bg.jpg') center/cover fixed;
 }
 .wrapper {
   width: 75%;
@@ -74,15 +79,31 @@ img {
 
 input,
 textarea {
+  font-family: $font-1, sans-serif;
   border: solid 1px $color3;
   height: 60px;
   border-radius: 5px;
-  background: $color2;
+  background: none;
   color: $color4;
   &:focus-visible {
     outline: solid 2px $color4;
   }
-  &:focus {
-    background: $color1;
+  &:focus,
+  :visited {
+    background: none;
   }
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $color4;
+  transition: background-color 5000s ease-in-out 0s;
 }
